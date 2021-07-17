@@ -1,7 +1,8 @@
 <div class="container">
-  <div class ="d-flex justify-content-between text-center pt-4 align-items-center">
-    <div>
-      <div>
+
+  <div class ="header pt-4">
+    <div class="links">
+      <div class=''>
         <%= link_to "About", about_path %>
         <%= link_to "Contact", contact_path %>
       </div>
@@ -11,7 +12,20 @@
       </div>
     </div>
       <%# <%= link_to "About", about_path %>
-      <h1>PROFESSOR NOVAK'S<br>CABINET</h1>
-      <%= image_tag "Title.jpeg", style: "height: 190px; width: 250px;" %>
+      <div class='text-center'>
+        <h1>PROFESSOR NOVAK'S<br>CABINET</h1>
+      </div>
+      <div class='header-image'>
+        <%= image_tag "title.jpeg", style: "height: 190px; width: 250px;" %>
+      </div>
+  </div>
+  <div class="card-outer mt-5">
+      <% @effects.each do |effect| %>
+        <div class="effect-card">
+      <%= image_tag "post.jpeg", style: "width: 360px; height:288px;" %>
+      <h3><%= effect.name %></h3>
+      <%= effect.description %>
+    </div>
+    <% end %>
   </div>
 </div>

@@ -1,3 +1,30 @@
 h1 {
   font-size: 40px;
 }
+
+
+.card-outer {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  height: 100%;
+  width:375px;
+}
+
+.header {
+  display : flex; // flex box
+  justify-content : space-between; // horizontal alignment
+  align-content   : center; // vertical alignment
+}
+
+.header-image {
+  justify-self : flex-start;
+}
+
+.links {
+  justify-self : flex-end;
+}
+
+.effect-card {
+
+}
