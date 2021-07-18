@@ -7,9 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
+counter = 1
 5.times do
-  counter = 1
   new_effect = Effect.new(
     name: "Placeholder",
     description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis blanditiis enim ullam dignissimos? Rem culpa vel explicabo, ab cupiditate repudiandae.",
