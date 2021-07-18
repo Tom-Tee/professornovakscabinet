@@ -1,31 +1,49 @@
-<div class="container">
+<div class="container-top d-flex justify-content-center align-items-center">
+  <h1>PROFESSOR NOVAK'S CABINET</h1>
+</div>
 
-  <div class ="header pt-4">
-    <div class="links">
-      <div class=''>
-        <%= link_to "About", about_path %>
-        <%= link_to "Contact", contact_path %>
-      </div>
-      <div>
-        <%= link_to "Login", about_path %>
-        <%= link_to "Cart", about_path %>
-      </div>
+
+<div class="container-first d-flex justify-content-around align-items-center">
+    <div class=''>
+      <%= link_to "EFFECTS", about_path %>
+      <%= link_to "ABOUT", about_path %>
+      <%= link_to "CONTACT", contact_path %>
     </div>
-      <%# <%= link_to "About", about_path %>
-      <div class='text-center'>
-        <h1>PROFESSOR NOVAK'S<br>CABINET</h1>
-      </div>
-      <div class='header-image'>
-        <%= image_tag "title.jpeg", style: "height: 190px; width: 250px;" %>
-      </div>
+    <div>
+      <%= link_to "LOGIN", about_path %>
+      <%= link_to "CART", about_path %>
+    </div>
+</div>
+
+
+<div class="about-container d-flex justify-content-center align-items-center">
+  <div class="inner-about-container d-flex justify-content-around align-items-center">
+    <div class="about-detail text-center">
+      <h3>ABOUT</h3>
+      <h5>A MAGIC ENTHUSIAST, BOOK COLLECTOR AND TRICK CREATOR, PAUL TEMPLE HAS HAD A STRONG INTEREST IN MAGIC FOR OVER 50 YEARS. HE LIVES WITH HIS WIFE, DAUGHTER AND DOG IN SCOTLAND, UK.</h5>
+    </div>
+    <div class='header-image'>
+      <%= image_tag "title.jpeg", style: "height: 228px; width: 250px; border-radius:8px;" %>
+    </div>
   </div>
+</div>
+
+<div class="container pb-5">
   <div class="card-outer mt-5">
       <% @effects.each do |effect| %>
-        <div class="effect-card">
-      <%= image_tag "post.jpeg", style: "width: 360px; height:288px;" %>
-      <h3><%= effect.name %></h3>
-      <%= effect.description %>
-    </div>
+        <div class="effect-card text-center">
+        <%= image_tag "post.jpeg", style: "width: 360px; height:288px;" %>
+        <h3><%= effect.name %></h3>
+        <%= effect.description %>
+      </div>
     <% end %>
   </div>
+</div>
+
+
+<div class="footer">
+<div class="bottom-container d-flex justify-content-center align-items-center">
+<div class="bottom-inner-container">
+</div>
+</div>
 </div>

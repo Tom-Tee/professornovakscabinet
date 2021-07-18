@@ -1,7 +1,59 @@
-h1 {
-  font-size: 40px;
+// h1 {
+//   font-size: 40px;
+// }
+
+// CONTAINERS
+
+.custom-container {
+  margin-left:100px;
+  margin-right:100px;
 }
 
+.container-top {
+  height: 176px;
+  width: 100%;
+  background-color: #211B1B;
+  color:#F9F9F9;
+  h1 {
+  font-size: 64px;
+  }
+}
+
+.container-first {
+  height: 80px;
+  width: 100%;
+}
+
+.about-container {
+  height: 320px;
+  background-color: #4B4662;
+}
+
+.about-detail {
+  width: 40%;
+  color:#F9F9F9;
+  font-weight: 100;
+  h3 {
+    font-size: 40px;
+  }
+}
+
+.inner-about-container {
+  height:208px;
+  background-color: #211B1B;
+  width: 100%;
+}
+
+.bottom-container {
+  height: 320px;
+  background-color: #4B4662;
+}
+
+.bottom-inner-container {
+  height:208px;
+  background-color: #211B1B;
+  width: 100%;
+}
 
 .card-outer {
   display:grid;
