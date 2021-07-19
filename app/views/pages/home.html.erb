@@ -1,14 +1,14 @@
 <%= render "components/page_header" %>
 
 
-<div class="about-container d-flex justify-content-center align-items-center">
-  <div class="inner-about-container d-flex justify-content-around align-items-center">
+<div class="about-container d-flex justify-content-center align-items-center grain">
+  <div class="inner-about-container d-flex justify-content-around align-items-center grain">
     <div class="about-detail text-center">
       <h3>ABOUT</h3>
       <h5>A MAGIC ENTHUSIAST, BOOK COLLECTOR AND TRICK CREATOR, PAUL TEMPLE HAS HAD A STRONG INTEREST IN MAGIC FOR OVER 50 YEARS. HE LIVES WITH HIS WIFE, DAUGHTER AND DOG IN SCOTLAND, UK.</h5>
     </div>
     <div class= 'header-image' >
-      <%= cl_image_tag("title_mz99uc", style: "height: 228px; width: 250px; border-radius:8px;margin-right:32px;") %>
+      <%= cl_image_tag("title_mz99uc", style: "height: 228px; width: 250px; border-radius:8px;margin-right:32px;box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;") %>
       <%# <%= image_tag "title.jpeg", style: "height: 228px; width: 250px; border-radius:8px;" %> %>
     </div>
   </div>
@@ -19,7 +19,7 @@
       <% @effects.each do |effect| %>
         <div class="effect-card text-center">
         <%# <%= image_tag "post.jpeg", style: "width: 360px; height:288px;" %>
-        <%= cl_image_tag("post_wufjyp", style: "width: 360px; height:288px;") %>
+        <%= cl_image_tag("post_wufjyp", style: "width: 360px; height:288px;box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;") %>
         <h3><%= effect.name %></h3>
         <%= effect.description %>
       <%= link_to 'Effect', effect_path(effect), class:"btn-block btn-primary p-2 w-50 text-center" %>
