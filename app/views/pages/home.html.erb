@@ -1,23 +1,4 @@
-<div class="container-top d-flex justify-content-center align-items-center">
-  <div>
-    <h1>PROFESSOR NOVAK'S CABINET</h1>
-      <h1>PROFESSOR NOVAK'S CABINET</h1>
-        <h1>PROFESSOR NOVAK'S CABINET</h1>
-  </div>
-</div>
-
-
-<div class="container-first d-flex justify-content-around align-items-center">
-    <div class=''>
-      <%= link_to "EFFECTS", about_path %>
-      <%= link_to "ABOUT", about_path %>
-      <%= link_to "CONTACT", contact_path %>
-    </div>
-    <div>
-      <%= link_to "LOGIN", user_session_path %>
-      <%= link_to "CART", about_path %>
-    </div>
-</div>
+<%= render "components/page_header" %>
 
 
 <div class="about-container d-flex justify-content-center align-items-center">
@@ -39,6 +20,7 @@
         <%= image_tag "post.jpeg", style: "width: 360px; height:288px;" %>
         <h3><%= effect.name %></h3>
         <%= effect.description %>
+      <%= link_to 'Effect', effect_path(effect), class:"btn-block btn-primary p-2 w-50 text-center" %>
       </div>
     <% end %>
   </div>

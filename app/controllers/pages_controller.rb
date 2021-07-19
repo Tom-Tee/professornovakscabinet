@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 
   end
 
-  def show
+  def admin
 
   end
 
