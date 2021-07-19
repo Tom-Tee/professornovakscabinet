@@ -7,17 +7,19 @@
       <h3>ABOUT</h3>
       <h5>A MAGIC ENTHUSIAST, BOOK COLLECTOR AND TRICK CREATOR, PAUL TEMPLE HAS HAD A STRONG INTEREST IN MAGIC FOR OVER 50 YEARS. HE LIVES WITH HIS WIFE, DAUGHTER AND DOG IN SCOTLAND, UK.</h5>
     </div>
-    <div class='header-image'>
-      <%= image_tag "title.jpeg", style: "height: 228px; width: 250px; border-radius:8px;" %>
+    <div class= 'header-image' >
+      <%= cl_image_tag("title_mz99uc", style: "height: 228px; width: 250px; border-radius:8px;") %>
+      <%# <%= image_tag "title.jpeg", style: "height: 228px; width: 250px; border-radius:8px;" %> %>
     </div>
   </div>
 </div>
 
-<div class="container pb-5">
+<div class="container">
   <div class="card-outer mt-5">
       <% @effects.each do |effect| %>
         <div class="effect-card text-center">
-        <%= image_tag "post.jpeg", style: "width: 360px; height:288px;" %>
+        <%# <%= image_tag "post.jpeg", style: "width: 360px; height:288px;" %>
+        <%= cl_image_tag("post_wufjyp", style: "width: 360px; height:288px;") %>
         <h3><%= effect.name %></h3>
         <%= effect.description %>
       <%= link_to 'Effect', effect_path(effect), class:"btn-block btn-primary p-2 w-50 text-center" %>
@@ -26,10 +28,4 @@
   </div>
 </div>
 
-
-<div class="footer">
-<div class="bottom-container d-flex justify-content-center align-items-center">
-<div class="bottom-inner-container">
-</div>
-</div>
-</div>
+<%= render "components/page_footer" %>
