@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
   def home
     @effects = Effect.all
+    # raise
   end
 
   def about

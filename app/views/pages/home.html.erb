@@ -25,7 +25,8 @@
         <div class="effect-card text-center">
         <%# <%= image_tag "post.jpeg", style: "width: 360px; height:288px;" %>
         <div class="effect-card-image">
-          <%= cl_image_tag("post_wufjyp", style: "width: 360px; height:288px;box-shadow: rgb(0 0 0) 0px 0px 5px 5px;") %>
+        <%= cl_image_tag effect.photo.key, style: "width: 360px; height:288px;box-shadow: rgb(0 0 0) 0px 0px 5px 5px;"%>
+          <%# <%= cl_image_tag("post_wufjyp", style: "width: 360px; height:288px;box-shadow: rgb(0 0 0) 0px 0px 5px 5px;") %>
         </div>
         <h3 class="m-3"><%= effect.name %></h3>
         <%= effect.description %>
