@@ -10,14 +10,14 @@
 }
 
 .container-top {
-  height: 176px;
+  height: 136px;
   width: 100%;
   // background-color: #211B1B;
   background-color: black;
   color:#F9F9F9;
 }
 h1 {
-    font-size: 64px;
+    font-size: 40px;
     animation: glitch1 2.5s infinite;
     margin: 0;
     line-height: 0;
@@ -33,16 +33,41 @@ h1:nth-child(3) {
   // animation: glitch3 2.5s infinite;
 }
 
+h5 {
+    font-size: 20px;
+    animation: glitch1 2.5s infinite;
+    margin: 0;
+    line-height: 0;
+  }
+
+h5:nth-child(2) {
+  color:#7b7b7b;
+  animation: glitch2 2.5s infinite;
+}
+
+h5:nth-child(3) {
+  color: #cacaca;
+  // animation: glitch3 2.5s infinite;
+}
+
+.cabinet-header {
+margin:18px;
+}
+
 .container-first {
   height: 80px;
   width: 100%;
+  border: 3px solid black;
 }
 
-.grain {}
+.grain {
+
+}
 
 .about-container {
   height: 320px;
   background-color: #4B4662;
+
 }
 
 .about-detail {
@@ -59,6 +84,8 @@ h1:nth-child(3) {
   // background-color: #211B1B;
   background-color: black;
   width: 100%;
+  position:sticky;
+  border: 3px solid black;
 }
 
 .bottom-container {
@@ -76,10 +103,11 @@ h1:nth-child(3) {
 .card-outer {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 22px;
   height: 100%;
   width:375px;
 }
+
 
 .header {
   display : flex; // flex box
@@ -88,15 +116,22 @@ h1:nth-child(3) {
 }
 
 .header-image {
-  justify-self : flex-start;
+  // justify-self : flex-start;
+    // box-shadow: inset rgba(0, 0, 0, 100) 0px 22px 70px 4px;
+    margin-right:32px;
+    border-radius: 8px;
+    box-shadow: inset black 0px 0px 22px 8px;
 }
 
 .links {
   justify-self : flex-end;
 }
 
-.effect-card {
+.effect-card-image {
+  box-shadow: inset black 0px 0px 22px 8px;
+}
 
+.effect-card {
 }
 
 @keyframes glitch1 {
