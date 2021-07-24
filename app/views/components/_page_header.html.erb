@@ -12,9 +12,18 @@
       <%= link_to "EFFECTS", root_path %>
       <%= link_to "ABOUT", about_path %>
       <%= link_to "CONTACT", contact_path %>
+      <% if current_user == @admin %>
+      <%= link_to "ADMIN", admin_path %>
+      <% end %>
     </div>
     <div>
-      <%= link_to "LOGIN", user_session_path %>
-      <%= link_to "SIGN UP", new_user_registration_path %>
+    <% if current_user  %>
+        <%= link_to "CART", user_session_path %>
+        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "LOGIN", user_session_path %>
+        <%= link_to "SIGN UP", new_user_registration_path %>
+      <% end %>
     </div>
+
 </div>

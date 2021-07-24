@@ -7,6 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 
+
+puts "Creating Administration User"
+
+admin = User.new(
+  email: "templemagic@hotmail.com",
+  password: "123456",
+)
+
+admin.save
+
 counter = 1
 # 5.times do
   new_effect = Effect.new(
