@@ -4,7 +4,7 @@ class ApplicationPolicy
   def initialize(user, record)
     @user = user
     @record = record
-    @admin = @user.find( |user| user.id == 1)
+    # @admin = @user.find( |user| user.id == 1)
   end
 
   def index?
