@@ -16,7 +16,7 @@ class PagesController < ApplicationController
   end
 
   def admin
-
+    @effects = Effect.all
   end
 
 end

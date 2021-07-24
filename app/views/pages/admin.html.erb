@@ -1,0 +1,17 @@
+<%= render "components/page_header" %>
+
+
+<div class="container mt-5">
+  <h2>ADMIN PORTAL</h2>
+
+  <h6>AMOUNT OF EFFECTS: <%= @effects.length %></h6>
+  <h6><%= link_to "Create effect", effects_path %></h6>
+  <h6><%= link_to "Destroy effect", effects_path %></h6>
+  <h6>Users in the mailing list</h6>
+  <h6>Check users of site</h6>
+</div>
+
+
+
+
+<%= render "components/page_footer" %>
