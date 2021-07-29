@@ -5,12 +5,13 @@
 // CONTAINERS
 
 .effect-detail {
-  height:100px;
-  font-size: 14px;
+  height:70px;
+  font-size: 12px;
 }
 
 .effect-card-image {
   border-radius: 8px;
+  // border: 1px solid black;
 }
 
 .effect-card {
@@ -24,6 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  // border: 1px solid black;
   color: white;
   font-size: 24px;
   font-weight: bold;
