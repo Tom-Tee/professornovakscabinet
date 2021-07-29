@@ -16,6 +16,13 @@ class PagesController < ApplicationController
 
   def admin
     @effects = Effect.all
+    @effect = Effect.new
+  end
+
+  private
+
+  def set_effect
+    params.require(:article).permit(:title, :body, :photo)
   end
 
 end

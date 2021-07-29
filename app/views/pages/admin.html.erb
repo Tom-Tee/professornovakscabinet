@@ -1,14 +1,40 @@
 <%= render "components/page_header" %>
 
 
-<div class="container mt-5">
+<div class="container mt-5 text-center">
   <h2>ADMIN PORTAL</h2>
 
   <h6>AMOUNT OF EFFECTS: <%= @effects.length %></h6>
-  <h6><%= link_to "Create effect", effects_path %></h6>
-  <h6><%= link_to "Destroy effect", effects_path %></h6>
-  <h6>Users in the mailing list</h6>
-  <h6>Check users of site</h6>
+
+<div class = 'mini-card-parent d-flex justify-content-center'>
+    <% @effects.each do |effect| %>
+    <div class ="mini-card m-5">
+    <div class="card-name d-flex justify-content-center align-items-center">
+        <%= effect.name %>
+    </div>
+      <%= cl_image_tag effect.photo.key, style: "border-radius:width: 100px; height:100px;"%>
+      <%= link_to "", effect_path(effect), class: "p-2 btn btn-outline-danger fas fa-trash-alt", method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+    <% end %>
+</div>
+
+
+  <h4 class="mt-5">CREATE EFFECT</h4>
+
+  <div class = "d-flex justify-content-center">
+    <%= simple_form_for(@effect) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.input :video %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+
+
+
+
 </div>
 
 
