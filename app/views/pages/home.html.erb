@@ -24,13 +24,15 @@
       <% @effects.each do |effect| %>
         <div class="effect-card text-center">
         <%# <%= image_tag "post.jpeg", style: "width: 360px; height:288px;" %>
-        <div class="effect-card-image">
-        <%= cl_image_tag effect.photo.key, style: "border-radius:width: 360px; height:288px;box-shadow: rgb(0 0 0) 0px 0px 15px 5px;z-index:-1;position: relative;"%>
+        <%= link_to effect_path(effect) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path effect.photo.key, height: 400, crop: :fill %>')">
+        <% end %>
+          <p class="m-3"><%= effect.name.upcase %></p>
+          <%# <%= cl_image_tag effect.photo.key, class: 'card-image'%>
           <%# <%= cl_image_tag("post_wufjyp", style: "width: 360px; height:288px;box-shadow: rgb(0 0 0) 0px 0px 5px 5px;") %>
         </div>
         <div class='effect-detail'>
-          <h3 class="m-3"><%= effect.name %></h3>
-          <%= effect.description %>
+          <p><%= effect.description %></p>
         </div>
       <%= link_to 'Effect', effect_path(effect), class:"btn-block btn-primary p-2 w-50 text-center" %>
       </div>

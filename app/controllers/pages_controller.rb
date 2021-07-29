@@ -4,6 +4,7 @@ class PagesController < ApplicationController
     @effects = Effect.all
     @user = User.all
     @admin = @user.find {|user| user.id == 1}
+    # raise
   end
 
   def about
