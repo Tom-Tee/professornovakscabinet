@@ -14,8 +14,21 @@
   // border: 1px solid black;
 }
 
+.price-color {
+  color:rgb(0, 0, 0);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(213, 213, 213);
+  font-size: 16px;
+  padding: 2px;
+  text-shadow: none;
+  border-radius: 4px;
+}
+
 .effect-card {
   border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .card-category {
@@ -25,6 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position:relative;
   // border: 1px solid black;
   color: white;
   font-size: 24px;
@@ -59,7 +73,7 @@
 }
 
 .card-image {
-  width:100%;
+  width:340px;
   height:288px;
   box-shadow: black 0px 0px 15px 0px;
   z-index:-1;

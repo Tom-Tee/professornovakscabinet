@@ -1,28 +1,49 @@
 <div class="container-top d-flex justify-content-center align-items-center grain">
+  <%= link_to root_path do %>
   <div>
     <h1>PROFESSOR NOVAK'S CABINET</h1>
       <h1>PROFESSOR NOVAK'S CABINET</h1>
         <h1>PROFESSOR NOVAK'S CABINET</h1>
   </div>
+  <% end %>
 </div>
 
 
 <div class="container-first d-flex justify-content-around align-items-center grain">
-    <div class=''>
+    <div class='d-flex'>
+    <div class='side-border px-3'>
       <%= link_to "EFFECTS", root_path %>
+    </div>
+    <div class='side-border px-3'>
       <%= link_to "ABOUT", about_path %>
+    </div>
+    <div class='px-3'>
       <%= link_to "CONTACT", contact_path %>
+    </div>
       <% if current_user == @admin %>
+    <div class='side-border-right px-3'>
       <%= link_to "ADMIN", admin_path %>
+    </div>
       <% end %>
     </div>
-    <div>
+
+
+
+    <div class='log-nav d-flex'>
     <% if current_user  %>
-        <%= link_to "CART", user_session_path %>
-        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete %>
+    <div class="sign px-3">
+          <%= link_to "CART", user_session_path %>
+    </div>
+    <div class="px-3">
+          <%= link_to "LOG OUT", destroy_user_session_path, method: :delete %>
+    </div>
       <% else %>
+      <div class="sign px-3">
         <%= link_to "LOGIN", user_session_path %>
+      </div>
+      <div class="px-3">
         <%= link_to "SIGN UP", new_user_registration_path %>
+      </div>
       <% end %>
     </div>
 

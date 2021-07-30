@@ -1,22 +1,29 @@
 <%= render "components/page_header" %>
 
-<div class = "d-flex justify-content-center align-items-center">
+<div class="container">
+  <div class = "d-flex justify-content-center align-items-center">
 
-<div>
-      <h2>EFFECT SHOW PAGE</h2>
+    <div class="d-flex m-5">
+      <div>
+          <%= cl_image_tag @effect.photo.key, class: 'card-image'%>
+      </div>
 
-      <%# <% @effects.each do |effect| %>
-      <h3>
-      <%= @effect.name %>
-      </h3>
-      <h5>
-      <%= @effect.price %>
-      </h5>
-      <p><%= @effect.description %></p>
+      <div class = 'm-5'>
+          <h3>
+          <%= @effect.name %>
+          </h3>
+          <p>
+          £<%= @effect.price %>
+          </p>
+          <p><%= @effect.description %></p>
 
-      <%= @effect.video %>
-      <%# <% end %> %>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eozFlgu6ByY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </div>
+    </div>
+  </div>
 </div>
-</div>
+
 
 <%= render "components/page_footer" %>
