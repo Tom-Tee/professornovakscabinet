@@ -135,6 +135,11 @@ h5:nth-child(3) {
 
 }
 
+.about-page-container {
+  height: 380px;
+  background-color: #4B4662;
+}
+
 .about-detail {
   width: 40%;
   color:#dbdbdb;
@@ -178,6 +183,13 @@ h5:nth-child(3) {
     border-radius: 8px;
     box-shadow: inset black 0px 0px 22px 8px;
 }
+
+.about-image {
+  box-shadow: inset black 0px 0px 50px 2px;
+  margin-right:32px;
+  border-radius: 8px;
+}
+
 
 .links {
   justify-self : flex-end;
