@@ -10,7 +10,8 @@
 
 
 <div class="container-first d-flex justify-content-around align-items-center grain">
-    <div class='d-flex'>
+
+  <div class='d-flex'>
     <div class='side-border px-3'>
       <%= link_to "EFFECTS", root_path %>
     </div>
@@ -25,11 +26,10 @@
       <%= link_to "ADMIN", admin_path %>
     </div>
       <% end %>
-    </div>
+  </div>
 
 
-
-    <div class='log-nav d-flex'>
+  <div class='log-nav d-flex'>
     <% if current_user  %>
     <div class="sign px-3">
           <%= link_to "CART", user_session_path %>

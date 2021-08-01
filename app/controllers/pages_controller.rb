@@ -8,10 +8,14 @@ class PagesController < ApplicationController
   end
 
   def about
+    @user = User.all
+    @admin = @user.find {|user| user.id == 1}
 
   end
 
   def contact
+    @user = User.all
+    @admin = @user.find {|user| user.id == 1}
 
   end
 
